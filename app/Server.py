@@ -1,8 +1,8 @@
 import os
 from flask import Flask, render_template
 
-template_dir = os.path.abspath('app/web/templates')
-app = Flask(__name__,  static_folder=os.path.abspath('app/web/static/'),
+template_dir = os.path.abspath('web/templates')
+app = Flask(__name__,  static_folder=os.path.abspath('web/static/'),
             template_folder = template_dir)
 
 
@@ -23,4 +23,4 @@ def blog():
     return render_template('public/blog.html', title="Blog")
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5003)
+    app.run(debug=True, port=5000)
