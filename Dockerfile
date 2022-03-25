@@ -1,8 +1,8 @@
 FROM python:3.11.0a6-alpine3.15
 
-WORKDIR /appBlog
+WORKDIR /
 
-COPY . /appBlog/
+COPY . /
 
 RUN pip3 install -r requirements.txt
 
