@@ -2,14 +2,15 @@ import os
 from flask import Flask, render_template
 
 template_dir = os.path.abspath('app/web/templates')
-app = Flask(__name__, static_folder=os.path.abspath('web/static/'),
+app = Flask(__name__, static_folder=os.path.abspath('app/web/static/'),
             template_folder = template_dir)
 
 
 @app.route('/')
 def index():
-    return render_template('/public/index.html', title="Home")
+    return render_template('public/index.html', title="Home")
     # /home/fedesu/Documents/Proyectos/Python/myBlog/app/web/templates/public/index.html
+    # return template_dir
 
 @app.route('/about/')
 def about():
